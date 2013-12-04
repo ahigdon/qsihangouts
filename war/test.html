@@ -1,0 +1,94 @@
+<!-- The hangout API JavaScript. Always include this first -->
+<script src="http://plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+<script src="http://qsihangouts.appspot.com/static/jquery-1.9.1.js"></script>
+<script src="http://qsihangouts.appspot.com/static/jquery-ui-1.10.3.custom.min.js"></script>
+
+
+<!-- The JavaScript for this app. This must always be a full URL not a
+     relative path.
+     Tip: You can load it from a local web server such as
+     http://localhost/app.js for faster single user development -->
+<script src="http://qsihangouts.appspot.com/ggs/app.js"></script>
+<script>
+jQuery.noConflict();
+
+jQuery(function () {
+	jQuery("#tabs").tabs();
+});
+</script>
+<link type="text/css" rel="stylesheet" href="http://qsihangouts.appspot.com/static/app.css" />
+    <div id="container">
+        <div id="heading">
+             <h1>Dragon Phoenix</h1>
+        </div>
+        <div id="usercontrols">
+            <button class="controls">Clear</button>
+        </div>
+        <div id="admincontrols">
+            <button class="controls">New</button>
+            <button class="controls">Reveal</button>
+        </div>        
+        <div style="clear: both;"></div>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Yes/No</a></li>
+                <li><a href="#tabs-2">Fist to 5</a></li>
+                <li><a href="#tabs-3">Points</a></li>
+            </ul>
+            <div id="tabs-1">
+                <button class="yes">YES</button>&nbsp;&nbsp;
+                <button class="no">NO</button>
+            </div>
+            <div id="tabs-2">
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand0.png" height="35" width="35" />
+                </button>&nbsp;&nbsp;
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand1.png" height="35" width="35" />
+                </button>&nbsp;&nbsp;
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand2.png" height="35" width="35" />
+                </button>
+                <br/>
+                <br/>
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand3.png" height="35" width="35" />
+                </button>&nbsp;&nbsp;
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand4.png" height="35" width="35" />
+                </button>&nbsp;&nbsp;
+                <button>
+                    <img src="http://qsihangouts.appspot.com/static/hand5.png" height="35" width="35" />
+                </button>
+            </div>
+            <div id="tabs-3">
+                <button>0</button>&nbsp;&nbsp;
+                <button>½</button>&nbsp;&nbsp;
+                <button>1</button>
+                <br/>
+                <br/>
+                <button>2</button>&nbsp;&nbsp;
+                <button>3</button>&nbsp;&nbsp;
+                <button>5</button>
+                <br/>
+                <br/>
+                <button>8</button>&nbsp;&nbsp;
+                <button>13</button>&nbsp;&nbsp;
+                <button>20</button>
+                <br/>
+                <br/>
+                <button>40</button>&nbsp;&nbsp;
+                <button>100</button>&nbsp;&nbsp;
+                <button>?</button>
+            </div>
+        </div>
+        <hr />
+        <div>Facilitator:
+            <select style="width: 100%">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+        </div>        
+    </div>
