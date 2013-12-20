@@ -1,3 +1,7 @@
+<%
+String HOST = "gae.digihig.com";
+//String HOST = "qsihangouts.appspot.com";
+%>
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
     <!-- /*
@@ -22,14 +26,14 @@
 <!DOCTYPE html>
 <!-- The hangout API JavaScript. Always include this first -->
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
-<script src="//qsihangouts.appspot.com/static/jquery-1.9.1.js"></script>
-<script src="//qsihangouts.appspot.com/static/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="//<%=HOST%>/static/jquery-1.9.1.js"></script>
+<script src="//<%=HOST%>/static/jquery-ui-1.10.3.custom.min.js"></script>
 
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
-     //qsihangouts.appspot.com/app.js for faster single user development -->
-<script src="//qsihangouts.appspot.com/ggs/app.js"></script>
+     //<%=HOST%>/app.js for faster single user development -->
+<script src="//<%=HOST%>/ggs/app.js"></script>
 <script>
 jQuery.noConflict();
 
@@ -37,17 +41,17 @@ jQuery(function () {
 	jQuery("#tabs").tabs();
 });
 </script>
-<link type="text/css" rel="stylesheet" href="//qsihangouts.appspot.com/static/app.css" />
+<link type="text/css" rel="stylesheet" href="//<%=HOST%>/static/app.css" />
     <div id="container">
         <div id="heading">
              Dragon Phoenix
         </div>
         <div id="usercontrols">
-            <button class="controls">Clear</button>
+            <button class="controls" id="cmd_clear">Clear</button>
         </div>
         <div id="admincontrols">
-            <button class="controls">New</button>
-            <button class="controls">Reveal</button>
+            <button class="controls" id="cmd_new">New</button>
+            <button class="controls" id="cmd_show">Reveal</button>
         </div>        
         <div id="tabs">
             <ul>
@@ -61,24 +65,24 @@ jQuery(function () {
             </div>
             <div id="tabs-2">
                 <button class="voting" id="vt_hand0">
-                    <img src="//qsihangouts.appspot.com/static/hand0.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand0.png" height="35" width="35" />
                 </button>&nbsp;&nbsp;
                 <button class="voting" id="vt_hand1">
-                    <img src="//qsihangouts.appspot.com/static/hand1.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand1.png" height="35" width="35" />
                 </button>&nbsp;&nbsp;
                 <button class="voting" id="vt_hand2">
-                    <img src="//qsihangouts.appspot.com/static/hand2.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand2.png" height="35" width="35" />
                 </button>
                 <br/>
                 <br/>
                 <button class="voting" id="vt_hand3">
-                    <img src="//qsihangouts.appspot.com/static/hand3.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand3.png" height="35" width="35" />
                 </button>&nbsp;&nbsp;
                 <button class="voting" id="vt_hand4">
-                    <img src="//qsihangouts.appspot.com/static/hand4.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand4.png" height="35" width="35" />
                 </button>&nbsp;&nbsp;
                 <button class="voting" id="vt_hand5">
-                    <img src="//qsihangouts.appspot.com/static/hand5.png" height="35" width="35" />
+                    <img src="//<%=HOST%>/static/hand5.png" height="35" width="35" />
                 </button>
             </div>
             <div id="tabs-3">
@@ -94,7 +98,7 @@ jQuery(function () {
                 <br/>
                 <button class="voting" id="vt_points8">8</button>&nbsp;&nbsp;
                 <button class="voting" id="vt_points13">13</button>&nbsp;&nbsp;
-                <button class="voting" id="vt_points020>20</button>
+                <button class="voting" id="vt_points20">20</button>
                 <br/>
                 <br/>
                 <button class="voting" id="vt_points40">40</button>&nbsp;&nbsp;

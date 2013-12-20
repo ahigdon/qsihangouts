@@ -83,7 +83,7 @@ jQuery(function () {
             </div>
             <div id="tabs-3">
                 <button class="voting">0</button>&nbsp;&nbsp;
-                <button class="voting">½</button>&nbsp;&nbsp;
+                <button class="voting">&frac12;</button>&nbsp;&nbsp;
                 <button class="voting">1</button>
                 <br/>
                 <br/>
